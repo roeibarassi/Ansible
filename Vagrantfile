@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
     config.vm.provision "ansible" do |ansible|
       ansible.sudo = true
       ansible.verbose = "v"
-      ansible.limit = "webservers:web01"
+      ansible.limit = "webservers[0]"
       ansible.playbook = "apacheInstall.yml"
     end
   end
@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
     config.vm.provision "ansible" do |ansible|
       ansible.sudo = true
       ansible.verbose = "v"
-      ansible.limit = "webservers:web02"
+      ansible.limit = "webservers[1]"
       ansible.playbook = "apacheInstall.yml"
     end
   end
