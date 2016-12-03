@@ -1,0 +1,10 @@
+---
+- hosts: webservers
+  remote_user: vagrant
+  sudo: yes
+  tasks:
+    - name: install apache2
+      apt: name=apache2 update_cache=yes state=latest
+    
+    - name: inject index.html
+      template: src=templates/webPage.conf dest=/var/www/html/index.html

@@ -1,0 +1,6 @@
+[webservers]
+web01
+web02
+
+[LB]
+haproxyLB
