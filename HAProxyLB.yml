@@ -19,7 +19,7 @@
       apt: name=haproxy state=present
    
     - name: Update HAProxy config
-      template: src=haproxy.cfg 
+      template: src=haproxy.conf 
                 dest=/etc/haproxy/haproxy.cfg 
                 backup=yes
     
